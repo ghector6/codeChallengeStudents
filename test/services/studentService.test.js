@@ -8,4 +8,10 @@ describe("Test to se if static method gets all elementes from the json" , () => 
         const wholeList = studentService.printElements(students)
         expect(wholeList.length).toBe(51)
     })
+
+    test("2) if im getting the list of students with certification", () => {
+        const students = Reader.readJsonFile("./students.json")
+        const studentsValidated = studentService.studentsWithCertification(students, true)
+        expect(studentsValidated[1]).toBe("Lucinda")
+    })
 })
