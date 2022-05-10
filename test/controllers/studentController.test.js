@@ -12,4 +12,9 @@ describe("Tests for the controller", () => {
         const students = studentController.getStudsWithCert(true)
         expect(students.length).toBe(29)
     })
+
+    test ("to check for credits in students", () => {
+        const students = studentController.getStudsCreds(500)
+        expect(students.length).toBe(27)
+    })
 })
