@@ -9,7 +9,7 @@ describe("Tests for the controller", () => {
     })
 
     test("to see if im getting the true certs", () => {
-        const students = studentController.getStudsWithCert(false)
+        const students = studentController.getStudsWithCert(true)
         expect(students.length).toBe(29)
     })
 })
